@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>MacOutlet</title>
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+            rel="stylesheet">
+    <!-- endfonts -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/items.js" defer></script>
+    <script src="js/app.js" defer></script>
+    <link rel="stylesheet" href="css/index.css"/>
+</head>
+<body class="page">
+<div class="page__inner">
+    <div class="page__header">
+        <div class="container">
+            <div class="header">
+                <div class="header__logo">
+                    <img src="./img/logo.png" alt="MacOutlet"/>
+                </div>
+                <div class="header__cart-wrapper">
+                    <button class="header__cart js-cart-trigger">
+                      <span class="header__cart-icon" aria-hidden="true">
+                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="446.853px" height="446.853px" viewBox="0 0 446.853 446.853" style="enable-background: new 0 0 446.853 446.853" xml:space="preserve"><g><path d="M444.274,93.36c-2.558-3.666-6.674-5.932-11.145-6.123L155.942,75.289c-7.953-0.348-14.599,5.792-14.939,13.708 c-0.338,7.913,5.792,14.599,13.707,14.939l258.421,11.14L362.32,273.61H136.205L95.354,51.179 c-0.898-4.875-4.245-8.942-8.861-10.753L19.586,14.141c-7.374-2.887-15.695,0.735-18.591,8.1c-2.891,7.369,0.73,15.695,8.1,18.591 l59.491,23.371l41.572,226.335c1.253,6.804,7.183,11.746,14.104,11.746h6.896l-15.747,43.74c-1.318,3.664-0.775,7.733,1.468,10.916 c2.24,3.184,5.883,5.078,9.772,5.078h11.045c-6.844,7.617-11.045,17.646-11.045,28.675c0,23.718,19.299,43.012,43.012,43.012 s43.012-19.294,43.012-43.012c0-11.028-4.201-21.058-11.044-28.675h93.777c-6.847,7.617-11.047,17.646-11.047,28.675 c0,23.718,19.294,43.012,43.012,43.012c23.719,0,43.012-19.294,43.012-43.012c0-11.028-4.2-21.058-11.042-28.675h13.432 c6.6,0,11.948-5.349,11.948-11.947c0-6.6-5.349-11.948-11.948-11.948H143.651l12.902-35.843h216.221 c6.235,0,11.752-4.028,13.651-9.96l59.739-186.387C447.536,101.679,446.832,97.028,444.274,93.36z M169.664,409.814 c-10.543,0-19.117-8.573-19.117-19.116s8.574-19.117,19.117-19.117s19.116,8.574,19.116,19.117S180.207,409.814,169.664,409.814z  M327.373,409.814c-10.543,0-19.116-8.573-19.116-19.116s8.573-19.117,19.116-19.117s19.116,8.574,19.116,19.117 S337.916,409.814,327.373,409.814z"/></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
+                      </span>
+                    </button>
+                    <div class="cart js-cart">
+                        <div class="cart__wrapper-product-in-cart">
+                            <div class="cart__content">
+                                <div class="cart__titles">
+                                  <h3 class="cart__content-title">Shopping Cart</h3>
+                                  <h4 class="cart__content-subtitle">Checkout is almost done!</h4>
+                                </div>
+
+                              <div class="cart-product cart-product--proto js-proto-cart-product">
+                                <img src="" alt="" class="cart-product__image">
+                                <div class="cart-product__info">
+                                  <span class="cart-product__title">Apple AirPods Pro</span>
+                                  <span class="cart-product__price">
+                                                  <span>$</span>
+                                                  <span class="js-cart-product-price">600</span>
+                                                </span>
+
+                                </div>
+                                <div class="cart-product__count-block">
+                                  <button class="cart-product__button js-dicrease-product"></button>
+                                  <span class="cart-product__counter js-count">1</span>
+                                  <button class="cart-product__button cart-product__button--plus js-increase-product"></button>
+                                </div>
+                                <div class="cart-product__wrapper-remove-button">
+                                  <button class="cart-product__button-remove js-remove-product"></button>
+                                </div>
+                              </div>
+                                <ul class="cart__products-list js-product-cart-list">
+                                    <li class="cart__wrapper-product-item">
+                                    </li>
+                                </ul>
+                                <div class="cart__total">
+                                    <div class="cart__total-info">
+                                        <span class="cart__title">Total amount</span>
+                                        <span class="cart__value js-total-count">3 ptc.</span>
+                                    </div>
+                                    <div class="cart__total-info">
+                                        <span class="cart__title">Total Price</span>
+                                        <span class="cart__value js-total-price">1699$</span>
+                                    </div>
+                                </div>
+                                <div class="total__go-to-cart">
+                                    <button class="button">Buy</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page__main-wrapper">
+        <div class="page__main">
+            <section class="product-units">
+                <div class="container">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="product-unit product-unit--title-dark js-product" data-prodid="33">
+                                    <picture class="product-unit__image-wrapper">
+                                        <img class="product-unit__image" src="./img/banners/air_pods_max_banner.jpg"
+                                             alt="AirPods Max"/>
+                                    </picture>
+                                    <div class="product-unit__inner">
+                                        <h1 class="product-unit__title">AirPods Max</h1>
+                                        <button class="button js-add-to-cart">Add to cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="product-unit js-product" data-prodid="32">
+                                    <picture class="product-unit__image-wrapper">
+                                        <img class="product-unit__image" src="./img/banners/airpods_pro_banner.png"
+                                             alt="AirPods Pro"/>
+                                    </picture>
+                                    <div class="product-unit__inner">
+                                        <h1 class="product-unit__title">AirPods Pro</h1>
+                                        <button class="button js-add-to-cart">Add to cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="product-unit product-unit--title-dark product-unit--content-start js-product"
+                                     data-prodid="29">
+                                    <picture class="product-unit__image-wrapper">
+                                        <img class="product-unit__image" src="./img/banners/apple_tv_banner.png"
+                                             alt="Apple TV"/>
+                                    </picture>
+                                    <div class="product-unit__inner">
+                                        <h1 class="product-unit__title">Apple TV</h1>
+                                        <button class="button js-add-to-cart">Add to cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="product-unit js-product" data-prodid="34">
+                                    <picture class="product-unit__image-wrapper">
+                                        <img class="product-unit__image" src="./img/banners/ipad_air_banner.jpg"
+                                             alt="IPad Air"/>
+                                    </picture>
+                                    <div class="product-unit__inner">
+                                        <h1 class="product-unit__title">IPad Air</h1>
+                                        <button class="button js-add-to-cart">Add to cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="product-unit product-unit--hidden-title js-product" data-prodid="16">
+                                    <picture class="product-unit__image-wrapper">
+                                        <img class="product-unit__image" src="./img/banners/iphone_12_banner.jpg"
+                                             alt="IPhone 12"/>
+                                    </picture>
+                                    <div class="product-unit__inner">
+                                        <h1 class="product-unit__title">IPhone 12</h1>
+                                        <button class="button js-add-to-cart">Add to cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="product-unit js-product" data-prodid="4">
+                                    <picture class="product-unit__image-wrapper">
+                                        <img class="product-unit__image" src="./img/banners/mac_book_banner.jpg"
+                                             alt="MacBook Pro"/>
+                                    </picture>
+                                    <div class="product-unit__inner">
+                                        <h1 class="product-unit__title">MacBook</h1>
+                                        <button class="button js-add-to-cart">Add to cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="product-unit js-product" data-prodid="14">
+                                    <picture class="product-unit__image-wrapper">
+                                        <img class="product-unit__image" src="./img/banners/watch_banner.jpg"
+                                             alt="Apple Watch"/>
+                                    </picture>
+                                    <div class="product-unit__inner">
+                                        <h1 class="product-unit__title">Apple Watch 4</h1>
+                                        <button class="button js-add-to-cart">Add to cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="catalog">
+                <div class="container container--content">
+                    <div class="catalog__sort">
+                        <div class="catalog-sort">
+                            <div class="catalog-sort__search-field-wrapper">
+                                <label for="catalog-sort__search-label">
+                    <span class="catalog-sort__search-icon">
+                      <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                           xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512.005 512.005"
+                           style="enable-background: new 0 0 512.005 512.005" xml:space="preserve">
+                        <g>
+                          <g>
+                            <path
+                                    d="M505.749,475.587l-145.6-145.6c28.203-34.837,45.184-79.104,45.184-127.317c0-111.744-90.923-202.667-202.667-202.667
+			S0,90.925,0,202.669s90.923,202.667,202.667,202.667c48.213,0,92.48-16.981,127.317-45.184l145.6,145.6
+			c4.16,4.16,9.621,6.251,15.083,6.251s10.923-2.091,15.083-6.251C514.091,497.411,514.091,483.928,505.749,475.587z
+			 M202.667,362.669c-88.235,0-160-71.765-160-160s71.765-160,160-160s160,71.765,160,160S290.901,362.669,202.667,362.669z"/>
+                          </g>
+                        </g>
+                        <g></g>
+                        <g></g>
+                        <g></g>
+                        <g></g>
+                        <g></g>
+                        <g></g>
+                        <g></g>
+                        <g></g>
+                        <g></g>
+                        <g></g>
+                        <g></g>
+                        <g></g>
+                        <g></g>
+                        <g></g>
+                        <g></g>
+                      </svg>
+                    </span>
+                                </label>
+                                <input type="text" class="catalog-sort__search-field" id="catalog-search"
+                                       placeholder="Enter device name..."/>
+                            </div>
+                            <div class="catalog-sort__config">
+                                <div class="catalog-dropdown js-catalog-dropdown">
+                                    <button type="button" class="catalog-dropdown__trigger js-catalog-dropdown-trigger">
+                      <span class="catalog-dropdown__icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="18px"
+                             height="18px">
+                          <path d="M0 0h24v24H0z" fill="none"/>
+                          <path d="M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z"/>
+                        </svg>
+                      </span>
+                                    </button>
+                                    <div class="catalog-dropdown__content">
+                                        <p class="catalog-dropdown__title">Order</p>
+                                        <menu class="catalog-dropdown__list js-catalog-sort-order">
+                                            <li class="catalog-dropdown__item">
+                                                <button class="catalog-dropdown__option catalog-dropdown__option--selected js-sort" value="def">
+                                                    <span class="catalog-dropdown__option-text">Default</span>
+                                                </button>
+                                            </li>
+                                            <li class="catalog-dropdown__item">
+                                                <button class="catalog-dropdown__option js-sort" value="asc">
+                            <span class="catalog-dropdown__option-icon catalog-dropdown__option-icon--asc">
+                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="24px"
+                                   height="24px">
+                                <path d="M0 0h24v24H0V0z" fill="none"/>
+                                <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
+                              </svg>
+                            </span>
+                                                    <span class="catalog-dropdown__option-text">Ascending</span>
+                                                    </span>
+                                                </button>
+                                            </li>
+                                            <li class="catalog-dropdown__item">
+                                                <button class="catalog-dropdown__option js-sort" value="desc">
+                            <span class="catalog-dropdown__option-icon catalog-dropdown__option-icon--desc">
+                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="24px"
+                                   height="24px">
+                                <path d="M0 0h24v24H0V0z" fill="none"/>
+                                <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
+                              </svg>
+                            </span>
+                                                    <span class="catalog-dropdown__option-text">Descending</span>
+                                                    </span>
+                                                    </span>
+                                                </button>
+                                            </li>
+                                        </menu>
+                                    </div>
+                                </div>
+                                <div class="catalog-dropdown catalog-dropdown--dual-list js-catalog-dropdown">
+                                    <button type="button" class="catalog-dropdown__trigger js-catalog-dropdown-trigger">
+                      <span class="catalog-dropdown__icon">
+                        <svg id="Layer_1" enable-background="new 0 0 512 512" height="512" viewBox="0 0 512 512"
+                             width="512" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                                  d="m272.066 512h-32.133c-25.989 0-47.134-21.144-47.134-47.133v-10.871c-11.049-3.53-21.784-7.986-32.097-13.323l-7.704 7.704c-18.659 18.682-48.548 18.134-66.665-.007l-22.711-22.71c-18.149-18.129-18.671-48.008.006-66.665l7.698-7.698c-5.337-10.313-9.792-21.046-13.323-32.097h-10.87c-25.988 0-47.133-21.144-47.133-47.133v-32.134c0-25.989 21.145-47.133 47.134-47.133h10.87c3.531-11.05 7.986-21.784 13.323-32.097l-7.704-7.703c-18.666-18.646-18.151-48.528.006-66.665l22.713-22.712c18.159-18.184 48.041-18.638 66.664.006l7.697 7.697c10.313-5.336 21.048-9.792 32.097-13.323v-10.87c0-25.989 21.144-47.133 47.134-47.133h32.133c25.989 0 47.133 21.144 47.133 47.133v10.871c11.049 3.53 21.784 7.986 32.097 13.323l7.704-7.704c18.659-18.682 48.548-18.134 66.665.007l22.711 22.71c18.149 18.129 18.671 48.008-.006 66.665l-7.698 7.698c5.337 10.313 9.792 21.046 13.323 32.097h10.87c25.989 0 47.134 21.144 47.134 47.133v32.134c0 25.989-21.145 47.133-47.134 47.133h-10.87c-3.531 11.05-7.986 21.784-13.323 32.097l7.704 7.704c18.666 18.646 18.151 48.528-.006 66.665l-22.713 22.712c-18.159 18.184-48.041 18.638-66.664-.006l-7.697-7.697c-10.313 5.336-21.048 9.792-32.097 13.323v10.871c0 25.987-21.144 47.131-47.134 47.131zm-106.349-102.83c14.327 8.473 29.747 14.874 45.831 19.025 6.624 1.709 11.252 7.683 11.252 14.524v22.148c0 9.447 7.687 17.133 17.134 17.133h32.133c9.447 0 17.134-7.686 17.134-17.133v-22.148c0-6.841 4.628-12.815 11.252-14.524 16.084-4.151 31.504-10.552 45.831-19.025 5.895-3.486 13.4-2.538 18.243 2.305l15.688 15.689c6.764 6.772 17.626 6.615 24.224.007l22.727-22.726c6.582-6.574 6.802-17.438.006-24.225l-15.695-15.695c-4.842-4.842-5.79-12.348-2.305-18.242 8.473-14.326 14.873-29.746 19.024-45.831 1.71-6.624 7.684-11.251 14.524-11.251h22.147c9.447 0 17.134-7.686 17.134-17.133v-32.134c0-9.447-7.687-17.133-17.134-17.133h-22.147c-6.841 0-12.814-4.628-14.524-11.251-4.151-16.085-10.552-31.505-19.024-45.831-3.485-5.894-2.537-13.4 2.305-18.242l15.689-15.689c6.782-6.774 6.605-17.634.006-24.225l-22.725-22.725c-6.587-6.596-17.451-6.789-24.225-.006l-15.694 15.695c-4.842 4.843-12.35 5.791-18.243 2.305-14.327-8.473-29.747-14.874-45.831-19.025-6.624-1.709-11.252-7.683-11.252-14.524v-22.15c0-9.447-7.687-17.133-17.134-17.133h-32.133c-9.447 0-17.134 7.686-17.134 17.133v22.148c0 6.841-4.628 12.815-11.252 14.524-16.084 4.151-31.504 10.552-45.831 19.025-5.896 3.485-13.401 2.537-18.243-2.305l-15.688-15.689c-6.764-6.772-17.627-6.615-24.224-.007l-22.727 22.726c-6.582 6.574-6.802 17.437-.006 24.225l15.695 15.695c4.842 4.842 5.79 12.348 2.305 18.242-8.473 14.326-14.873 29.746-19.024 45.831-1.71 6.624-7.684 11.251-14.524 11.251h-22.148c-9.447.001-17.134 7.687-17.134 17.134v32.134c0 9.447 7.687 17.133 17.134 17.133h22.147c6.841 0 12.814 4.628 14.524 11.251 4.151 16.085 10.552 31.505 19.024 45.831 3.485 5.894 2.537 13.4-2.305 18.242l-15.689 15.689c-6.782 6.774-6.605 17.634-.006 24.225l22.725 22.725c6.587 6.596 17.451 6.789 24.225.006l15.694-15.695c3.568-3.567 10.991-6.594 18.244-2.304z"/>
+                          <path
+                                  d="m256 367.4c-61.427 0-111.4-49.974-111.4-111.4s49.973-111.4 111.4-111.4 111.4 49.974 111.4 111.4-49.973 111.4-111.4 111.4zm0-192.8c-44.885 0-81.4 36.516-81.4 81.4s36.516 81.4 81.4 81.4 81.4-36.516 81.4-81.4-36.515-81.4-81.4-81.4z"/>
+                        </svg>
+                      </span>
+                                    </button>
+                                    <div class="catalog-dropdown__content">
+                                        <div class="catalog-dropdown__inner">
+                                            <div class="catalog-dropdown__subcontent">
+                                                <label class="catalog-dropdown__title"
+                                                       for="catalog-category">Category</label>
+                                                <select class="catalog-dropdown__select js-category-sort" id="catalog-category">
+                                                    <option value="all" selected>All categories</option>
+                                                    <option value="airpods">Airpods</option>
+                                                    <option value="tv">TV</option>
+                                                    <option value="iphone">IPhones</option>
+                                                    <option value="watch">Watches</option>
+                                                </select>
+                                            </div>
+                                            <div class="catalog-dropdown__subcontent">
+                                                <label class="catalog-dropdown__title"
+                                                       for="catalog-category">Stock</label>
+                                                <select class="catalog-dropdown__select" id="catalog-stock">
+                                                    <option value="any" selected>Any</option>
+                                                    <option value="high">High</option>
+                                                    <option value="low">Low</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="catalog-dropdown__footer">
+                                            <button type="button" class="catalog-dropdown__action">Filter results
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog__grid">
+                        <div class="catalog__filter js-catalog-filter">
+                            <ul class="accordion-list js-accordion-list">
+                                <li class="accordion js-accordion">
+                                    <button class="accordion__controls">
+                                        <span class=accordion__name>Price</span>
+                                        <span class="accordion__icon"><svg xmlns="http://www.w3.org/2000/svg"
+                                                                           viewBox="0 0 24 24"
+                                                                           fill="black" width="24px" height="24px">
+                          <path d="M0 0h24v24H0V0z" fill="none"/>
+                          <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
+                        </svg></span>
+                                    </button>
+                                    <div class="accordion__content">
+                                        <div class="catalog-filter-range">
+                                            <div class="catalog-filter-range__field-wrapper">
+                                                <label for="filter-range-min"
+                                                       class="catalog-filter-range__label">From</label>
+                                                <input type="number" id="filter-range-min" value="350" min="0"
+                                                       max="1000" name="price">
+                                            </div>
+                                            <div class="catalog-filter-range__field-wrapper">
+                                                <label for="filter-range-max"
+                                                       class="catalog-filter-range__label">To</label>
+                                                <input type="number" id="filter-range-max" value="1350" min="1001"
+                                                       max="10000" name="price">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="accordion js-accordion">
+                                    <button class="accordion__controls">
+                                        <span class=accordion__name>Color</span>
+                                        <span class="accordion__icon"><svg xmlns="http://www.w3.org/2000/svg"
+                                                                           viewBox="0 0 24 24"
+                                                                           fill="black" width="24px" height="24px">
+                          <path d="M0 0h24v24H0V0z" fill="none"/>
+                          <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
+                        </svg></span>
+                                    </button>
+                                    <div class="accordion__content">
+                                        <ul class="checkbox-list">
+                                            <div class="checkbox-list__column">
+                                                <li class="checkbox-list__item">
+                                                    <div class="form-checkbox">
+                                                        <input type="checkbox" value="red" id="color-red" name="color">
+                                                        <label for="color-red">Red</label>
+                                                    </div>
+                                                </li>
+                                                <li class="checkbox-list__item">
+                                                    <div class="form-checkbox">
+                                                        <input type="checkbox" value="black" id="color-black"
+                                                               name="color">
+                                                        <label for="color-black">Black</label>
+                                                    </div>
+                                                </li>
+                                                <li class="checkbox-list__item">
+                                                    <div class="form-checkbox">
+                                                        <input type="checkbox" value="blue" id="color-blue"
+                                                               name="color">
+                                                        <label for="color-blue">Blue</label>
+                                                    </div>
+                                                </li>
+                                                <li class="checkbox-list__item">
+                                                    <div class="form-checkbox">
+                                                        <input type="checkbox" value="gold" id="color-gold"
+                                                               name="color">
+                                                        <label for="color-gold">Gold</label>
+                                                    </div>
+                                                </li>
+                                            </div>
+                                            <div class="checbox-list__column">
+                                                <li class="checkbox-list__item">
+                                                    <div class="form-checkbox">
+                                                        <input type="checkbox" value="green" id="color-green"
+                                                               name="color">
+                                                        <label for="color-green">Green</label>
+                                                    </div>
+                                                </li>
+                                                <li class="checkbox-list__item">
+                                                    <div class="form-checkbox">
+                                                        <input type="checkbox" value="white" id="color-white"
+                                                               name="color">
+                                                        <label for="color-white">White</label>
+                                                    </div>
+                                                </li>
+                                                <li class="checkbox-list__item">
+                                                    <div class="form-checkbox">
+                                                        <input type="checkbox" value="grey" id="color-grey"
+                                                               name="color">
+                                                        <label for="color-grey">Grey</label>
+                                                    </div>
+                                                </li>
+                                                <li class="checkbox-list__item">
+                                                    <div class="form-checkbox">
+                                                        <input type="checkbox" value="yellow" id="color-yellow"
+                                                               name="color">
+                                                        <label for="color-yellow">Yellow</label>
+                                                    </div>
+                                                </li>
+                                            </div>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="accordion js-accordion">
+                                    <button class="accordion__controls">
+                                        <span class=accordion__name>Memory</span>
+                                        <span class="accordion__icon"><svg xmlns="http://www.w3.org/2000/svg"
+                                                                           viewBox="0 0 24 24"
+                                                                           fill="black" width="24px" height="24px">
+                          <path d="M0 0h24v24H0V0z" fill="none"/>
+                          <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
+                        </svg></span>
+                                    </button>
+                                    <div class="accordion__content">
+                                        <ul class="checkbox-list">
+                                            <div class="checkbox-list__column">
+                                                <li class="checkbox-list__item">
+                                                    <div class="form-checkbox">
+                                                        <input type="checkbox" value="32-gb" id="32-gb">
+                                                        <label for="32-gb">32 Gb</label>
+                                                    </div>
+                                                </li>
+                                                <li class="checkbox-list__item">
+                                                    <div class="form-checkbox">
+                                                        <input type="checkbox" value="64-gb" id="64-gb">
+                                                        <label for="64-gb">64 Gb</label>
+                                                    </div>
+                                                </li>
+                                                <li class="checkbox-list__item">
+                                                    <div class="form-checkbox">
+                                                        <input type="checkbox" value="128-gb" id="128-gb">
+                                                        <label for="128-gb">128 Gb</label>
+                                                    </div>
+                                                </li>
+                                                <li class="checkbox-list__item">
+                                                    <div class="form-checkbox">
+                                                        <input type="checkbox" value="256-gb" id="256-gb">
+                                                        <label for="256-gb">256 GB</label>
+                                                    </div>
+                                                </li>
+                                            </div>
+                                            <div class="checkbox-list__column">
+                                                <li class="checkbox-list__item">
+                                                    <div class="form-checkbox">
+                                                        <input type="checkbox" value="512-gb" id="512-gb">
+                                                        <label for="512-gb">512 Gb</label>
+                                                    </div>
+                                                </li>
+                                                <li class="checkbox-list__item">
+                                                    <div class="form-checkbox">
+                                                        <input type="checkbox" value="1-tb" id="1-tb">
+                                                        <label for="1-tb">1 TB</label>
+                                                    </div>
+                                                </li>
+                                                <li class="checkbox-list__item">
+                                                    <div class="form-checkbox">
+                                                        <input type="checkbox" value="2-tb" id="2-tb">
+                                                        <label for="2-tb">2 TB</label>
+                                                    </div>
+                                                </li>
+                                                <li class="checkbox-list__item">
+                                                    <div class="form-checkbox">
+                                                        <input type="checkbox" value="4-tb" id="4-tb">
+                                                        <label for="4-tb">4 TB</label>
+                                                    </div>
+                                                </li>
+                                            </div>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="accordion js-accordion">
+                                    <button class="accordion__controls">
+                                        <span class=accordion__name>OS</span>
+                                        <span class="accordion__icon"><svg xmlns="http://www.w3.org/2000/svg"
+                                                                           viewBox="0 0 24 24"
+                                                                           fill="black" width="24px" height="24px">
+                          <path d="M0 0h24v24H0V0z" fill="none"/>
+                          <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
+                        </svg></span>
+                                    </button>
+                                    <div class="accordion__content">
+                                        <ul class="checkbox-list">
+                                            <div class="checkbox-list__column">
+                                                <li class="checkbox-list__item">
+                                                    <div class="form-checkbox">
+                                                        <input type="checkbox" value="ios" id="ios">
+                                                        <label for="ios">IOS</label>
+                                                    </div>
+                                                </li>
+                                                <li class="checkbox-list__item">
+                                                    <div class="form-checkbox">
+                                                        <input type="checkbox" value="macos" id="macos">
+                                                        <label for="macos">Mac OS</label>
+                                                    </div>
+                                                </li>
+                                                <li class="checkbox-list__item">
+                                                    <div class="form-checkbox">
+                                                        <input type="checkbox" value="tvos" id="tvos">
+                                                        <label for="tvos">tvOS</label>
+                                                    </div>
+                                                </li>
+                                                <li class="checkbox-list__item">
+                                                    <div class="form-checkbox">
+                                                        <input type="checkbox" value="watchos" id="watchos">
+                                                        <label for="watchos">Watch OS</label>
+                                                    </div>
+                                                </li>
+                                            </div>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="accordion js-accordion">
+                                    <button class="accordion__controls">
+                                        <span class=accordion__name>Display</span>
+                                        <span class="accordion__icon"><svg xmlns="http://www.w3.org/2000/svg"
+                                                                           viewBox="0 0 24 24"
+                                                                           fill="black" width="24px" height="24px">
+                          <path d="M0 0h24v24H0V0z" fill="none"/>
+                          <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
+                        </svg></span>
+                                    </button>
+                                    <div class="accordion__content">
+                                        <ul class="checkbox-list">
+                                            <div class="checkbox-list__column">
+                                                <li class="checkbox-list__item">
+                                                    <div class="form-checkbox">
+                                                        <input type="checkbox" value="32-gb" id="32-gb">
+                                                        <label for="32-gb">2 - 5 inch</label>
+                                                    </div>
+                                                </li>
+                                                <li class="checkbox-list__item">
+                                                    <div class="form-checkbox">
+                                                        <input type="checkbox" value="5-7-inch" id="5-7-inch">
+                                                        <label for="5-7-inch">5 - 7 inch</label>
+                                                    </div>
+                                                </li>
+                                                <li class="checkbox-list__item">
+                                                    <div class="form-checkbox">
+                                                        <input type="checkbox" value="7-12-inch" id="7-12-inch">
+                                                        <label for="7-12-inch">7 - 12 inch</label>
+                                                    </div>
+                                                </li>
+                                                <li class="checkbox-list__item">
+                                                    <div class="form-checkbox">
+                                                        <input type="checkbox" value="12-16-inch" id="12-16-inch">
+                                                        <label for="12-16-inch">12 - 16 inch</label>
+                                                    </div>
+                                                </li>
+                                                <li class="checkbox-list__item">
+                                                    <div class="form-checkbox">
+                                                        <input type="checkbox" value="16-plus-inch" id="16-plus-inch">
+                                                        <label for="16-plus-inch">+16 inch</label>
+                                                    </div>
+                                                </li>
+                                            </div>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <p class="catalog__error js-catalog-error">No products were found.</p>
+                        <ul class="catalog__list js-catalog-product-list">
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+<div class="product-modal">
+    <div class="product-modal__overlay"></div>
+    <div class="product-modal__inner">
+        <div class="product-modal__image-wrapper">
+            <img class="product-modal__image" alt="" src=""/>
+        </div>
+        <div class="product-modal__info">
+            <p class="product-modal__name"></p>
+            <div class="product-modal__stats">
+                <div class="product-modal__rating">
+                    <div class="product-modal__icon-like-wrapper">
+            <span class="product-modal__icon-like product-modal__icon-like">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="24px"
+                   height="24px">
+                <path d="M0 0h24v24H0z" fill="none"/>
+                <path
+                        d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+              </svg>
+            </span>
+                    </div>
+                    <div class="product-modal__reviews-wrapper">
+                        <div class="product-modal__reviews">
+                            <span class="product-modal__reviews-percentage"></span>
+                            <span>Positive reviews</span>
+                        </div>
+                        <p class="product-modal__review-status-wrapper">
+                            <span class="product-modal__review-status product-modal__review-status--good">Above average</span>
+                            <span class="product-modal__review-status product-modal__review-status--low">Low</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="product-modal__order-wrapper">
+                    <p class="product-modal__order-count">100</p>
+                    <p>orders</p>
+                </div>
+            </div>
+            <div class="product-modal__characteristics">
+                <p class="product-modal__prodcolor-wrapper">
+                    <span>Color: </span>
+                    <span class="product-modal__prodcolor"></span>
+                </p>
+                <p class="product-modal__prodos-wrapper">
+                    <span>OS: </span>
+                    <span class="product-modal__prodos"></span>
+                </p>
+                <p class="product-modal__prodchip-wrapper">
+                    <span>Chip: </span>
+                    <span class="product-modal__prodchip"></span>
+                </p>
+                <p class="product-modal__prodheight-wrapper">
+                    <span>Height: </span>
+                    <span class="product-modal__prodheight"></span>
+                </p>
+                <p class="product-modal__prodwidth-wrapper">
+                    <span>Width: </span>
+                    <span class="product-modal__prodwidth"></span>
+                </p>
+                <p class="product-modal__proddepth-wrapper">
+                    <span>Depth: </span>
+                    <span class="product-modal__proddepth"></span>
+                </p>
+                <p class="product-modal__prodweight-wrapper">
+                    <span>Weight: </span>
+                    <span class="product-modal__prodweight"></span>
+                </p>
+            </div>
+        </div>
+        <div class="product-modal__order">
+            <p class="product-modal__total-wrapper">
+                <span>$</span>
+                <span class="product-modal__total"></span>
+            </p>
+            <p class="product-modal__stock-wrapper">
+                <span>Stock: </span>
+                <span class="product-modal__stock"></span>
+                <span>pcs.</span>
+            </p>
+            <button class="product-modal__action button js-add-to-cart-button">
+                Add to cart
+            </button>
+        </div>
+    </div>
+</div>
+<div class="is-hidden">
+    <figure class="catalog-card js-product js-catalog-product-proto">
+        <picture class="catalog-card__image-wrapper">
+            <img class="catalog-card__image" src="img/items/airpods-max.jpg" alt="Prototype">
+        </picture>
+        <div class="catalog-card__favor">
+                    <span class="catalog-card__icon-favor catalog-card__icon-favor--filled">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="24px"
+                           height="24px">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path
+                                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                      </svg>
+                    </span>
+            <span class="catalog-card__icon-favor catalog-card__icon-favor--empty">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="24px"
+                           height="24px">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path
+                                d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z"/>
+                      </svg>
+                    </span>
+        </div>
+        <figcaption class="catalog-card__content">
+            <h3 class="catalog-card__title">
+                <a class="catalog-card__link" href="#">Title</a>
+            </h3>
+            <p class="catalog-card__stock-level">
+                      <span class="catalog-card__stock-icon catalog-card__stock-icon--low">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                          <path d="M0 0h24v24H0z" fill="none"/>
+                          <path
+                                  d="M14.59 8L12 10.59 9.41 8 8 9.41 10.59 12 8 14.59 9.41 16 12 13.41 14.59 16 16 14.59 13.41 12 16 9.41 14.59 8zM12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+                        </svg>
+                      </span>
+                <span class="catalog-card__stock-icon catalog-card__stock-icon--ok">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="24px"
+                             height="24px">
+                          <path d="M0 0h24v24H0z" fill="none"/>
+                          <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                        </svg>
+                      </span>
+                <span class="catalog-card__stock-quantity-wrapper">
+                        <span class=catalog-card__stock-quantity>0</span>
+                        <span>left in stock</span>
+                      </span>
+            </p>
+            <p class="catalog-card__price-wrapper">
+                <span>Price</span>
+                <span class="catalog-card__price">100</span>
+                <span class="catalog-card__currency">$</span>
+            </p>
+            <button class="button catalog-card__action js-add-to-cart">Add to cart</button>
+        </figcaption>
+        <div class="catalog-card__footer">
+            <div class="catalog-card__rating">
+                <div class="catalog-card__icon-like-wrapper">
+                        <span class="catalog-card__icon-like catalog-card__icon-like">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="24px"
+                               height="24px">
+                            <path d="M0 0h24v24H0z" fill="none"/>
+                            <path
+                                    d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                          </svg>
+                        </span>
+                </div>
+                <div class="catalog-card__reviews-wrapper">
+                    <div class="catalog-card__reviews">
+                        <span class="catalog-card__reviews-percentage"></span>
+                        <span>Positive reviews</span>
+                    </div>
+                    <p class="catalog-card__review-status-wrapper">
+                        <span class="catalog-card__review-status catalog-card__review-status--good">Above average</span>
+                        <span class="catalog-card__review-status catalog-card__review-status--low">Low</span>
+                    </p>
+                </div>
+            </div>
+            <div class="catalog-card__order-wrapper">
+                <p class="catalog-card__order-count">100</p>
+                <p>orders</p>
+            </div>
+        </div>
+    </figure>
+</div>
+</body>
+</html>
